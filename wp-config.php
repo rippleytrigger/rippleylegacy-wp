@@ -20,13 +20,13 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'local' );
+define( 'DB_NAME', 'rippleylegacy' );
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', "020D3BE73B2C79E5A1C4AC19F0BD73E39955E51FB9BC263581" );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -63,6 +63,19 @@ define('NONCE_SALT',       'HRIkzFAlnT2TY9KavlSSw1icmbWqdXlqA9vaGsvJCbAN1AmlsZZ5
  */
 $table_prefix = 'wp_';
 
+
+ // Enable WP_DEBUG mode
+ define( 'WP_DEBUG', true );
+
+ // Enable Debug logging to the /wp-content/debug.log file
+ define( 'WP_DEBUG_LOG', true );
+ 
+ // Disable display of errors and warnings 
+ define( 'WP_DEBUG_DISPLAY', false );
+ @ini_set( 'display_errors', 0 );
+ 
+ // Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+ define( 'SCRIPT_DEBUG', true );
 
 
 
