@@ -1,7 +1,8 @@
-		
+		import InitialWebsiteLoading from '../js/modules/InitialWebsiteLoading'
+
+		let initialWebsiteLoader = new InitialWebsiteLoading();
+
 		'use_strict';
-	
-	
 	
 		function sum_validation_contact()
 		{
@@ -135,7 +136,7 @@
 
 		$(window).on("load",function()
 		{
-			particlesJS.load('intro', 'js/particles.json', function() 
+			particlesJS.load('intro', `${server_data_object.siteUrl}/wp-content/themes/rippleylegacy/js/particles.json`, function() 
 			{
 				console.log('callback - particles.js config loaded');
 			});

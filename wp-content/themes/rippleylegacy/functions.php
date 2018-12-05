@@ -1,43 +1,50 @@
 <?php
 
-function rippley_enqueue_styles()
+function rippleyEnqueueScripts()
 {
     wp_enqueue_style( 'main-style', get_template_directory_uri(). '/css/main.css');
-    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css');
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
     
     wp_enqueue_style( 'google-font-1', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
     wp_enqueue_style( 'google-font-2', 'https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic');
 
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', NULL, microtime(), true );
-    wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', Array('jquery'), microtime(), true );
-    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/boostrap.min.js', NULL, microtime(), true );
-    wp_enqueue_script( 'particles', get_template_directory_uri() . '/js/particles.min.js', NULL, microtime(), true );
+    wp_deregister_script('jquery');
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), microtime(), true );
+    wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/scripts-bundled.js', array('jquery'), microtime(), true );
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/boostrap.min.js', array('jquery','main-script'), microtime(), true );
+    wp_enqueue_script( 'particles', get_template_directory_uri() . '/js/particles.min.js', array('jquery','main-script', 'bootstrap-js'), microtime(), true );
+
+    wp_localize_script( 'main-script', 'server_data_object',
+        array( 
+            'siteUrl' => get_site_url()
+        )
+    );
 }
 
+add_action('wp_enqueue_scripts', 'rippleyEnqueueScripts');
 
-add_action('wp_enqueue_scripts', 'rippley_enqueue_styles');
-
-
-function my_login_logo() 
-{ ?>
+function rippleyAdminLogo() 
+{ 
+?>
     <style type="text/css">
         #login h1 a, .login h1 a {
             background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.jpg);
         }
-        body.login{
-            /*background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/genesis_band.jpg);*/
-        }
-        p
+        
+        form
         {
-            padding: .75em !important;
+            /* padding: .75em !important; */
             background: whitesmoke;
         }
     </style>
 <?php 
 }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
+add_action( 'login_enqueue_scripts', 'rippleyAdminLogo' );
 
+
+// Disable toolbar only if the administrator is developing the theme
+add_filter('show_admin_bar', '__return_false');
 
 /*
 function kv_options_init() { 

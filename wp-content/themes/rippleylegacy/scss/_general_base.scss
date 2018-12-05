@@ -1,0 +1,471 @@
+body.body
+{
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-color: #2b3e50; 
+    overflow-x: hidden;
+}
+
+/* Scroll */
+body::-webkit-scrollbar 
+{
+    width: 1em;
+}
+body::-webkit-scrollbar-track 
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb 
+{
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+/* FIN */
+
+h1, h2, h3, h4,h5, h6 
+{
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p, ol, ul 
+{
+    font-size: 1.25em;
+    line-height: 1.6;
+}
+
+p
+{
+    color: $rippley-color-1;
+}
+
+ul
+{
+    color: $rippley-color-2;
+}
+
+section
+{
+    position: relative;
+}
+
+.container .jumbotron, .container-fluid .jumbotron
+{
+    border-radius: 0;
+}
+
+hr 
+{
+    max-width: 400px;
+    border-color: #999999;
+}
+
+a
+{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: $rippley-color-2;
+    &:hover
+    {
+        text-decoration: none;
+        color: $rippley-color-3;
+    }
+    &:focus
+    {
+        text-decoration: none;
+        color: $rippley-color-3;
+    }
+}
+
+/* Barra de Navegacion */
+#header
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+  
+.top-header
+{
+    background: $rippley-color-4;
+    color: $rippley-color-2;
+    padding: 2.5px;
+}
+
+.navbar
+{
+    margin-bottom: 0;
+}
+
+.navbar.affix > .container-fluid
+{
+    box-shadow: 0px 2px 30px 0px $rippley-color-1; 
+}
+
+.navbar-alternative
+{
+  background-color: $rippley-color-3;
+}
+
+.navbar-alternative .navbar-nav > li > a 
+{
+    color: $rippley-color-2;
+}
+    
+.navbar-toggle .icon-bar
+{
+    background: $rippley-color-2;
+}
+
+
+.navbar-brand 
+{
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav 
+{
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.navbar-alternative li:not(.active) a
+{
+    &:hover
+    {
+        background: inherit;
+        color: $rippley-color-1;
+    }
+    &:focus
+    {
+        background: inherit;
+        color: $rippley-color-1;
+    }
+}
+
+.navbar-alternative li.active
+{
+    & > a
+    {
+        transition: .3s;
+        background: inherit;
+        color: $rippley-color-1;
+        
+        &:before
+        {
+            width: 100%;
+        }
+    }
+}
+
+/* Nav - fixed */
+.logo_nav
+{
+    position: relative;
+}
+
+.logo_nav a
+{
+    font-family: "allura";
+    font-size: 2.75em;
+    letter-spacing: 5px;
+    color: $rippley-color-2;
+    text-decoration: none;
+}
+
+.logo_nav a:hover
+{
+    color: $rippley-color-1;
+    text-decoration: none;
+}
+
+.affix 
+{
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.affix + .container-fluid 
+{
+    padding-top: 250px;
+    z-index: 1500;
+}
+
+nav.bs-docs-nav 
+{
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+/* Fin */
+
+
+/*Fin barra de navegacion*/
+.img-full 
+{
+    width: 100%;
+}
+
+.brand-before 
+{
+    margin: 15px 0;
+}
+
+.brand-name 
+{
+    margin: 0;
+    font-size: 4em;
+}
+
+.tagline-divider 
+{
+    margin: 15px auto 3px;
+    max-width: 250px;
+    border-color: #999999;
+}
+
+.box
+{
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: rgba($rippley-color-2,0.9);
+}
+
+
+
+.intro-text 
+{
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.img-border 
+{
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left 
+{
+    float: none;
+    margin: 0 auto 0;
+}
+
+footer 
+{
+    background: $rippley-color-4;
+    color: $rippley-color-2;
+    .container
+    {
+        padding: 2.5%;
+    }
+    .copyright 
+    {
+        margin: 0;
+        padding: 20px 0;
+    }
+}
+
+
+@media screen and (min-width:768px) 
+{
+    .brand 
+    {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: $rippley-color-2;
+    }
+
+    .top-divider 
+    {
+        margin-top: 0;
+    }
+
+    .img-left 
+    {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .address-bar 
+    {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: $rippley-color-2;
+    }
+
+    .navbar 
+    {
+        min-height: 0;
+        border-radius: 0;
+    }
+
+    .navbar-default 
+    {
+        border: none;
+        background: $rippley-color-2;
+        background: rgba($rippley-color-2,0.9);
+    }
+
+    .nav>li>a, .navbar-header> a
+    {
+        /*padding-bottom: 15px;*/
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .navbar-nav>li>a, .navbar-header> a
+    {
+        line-height: normal;
+    }
+
+    .navbar-nav 
+    {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+}
+
+/*Header top  */
+.contact_info, .social_rrss
+   {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      a
+      {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+   }
+
+.social_rrss a
+{
+    font-size: 1.6em;    
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    color: $rippley-color-2;
+
+    &:hover
+    {
+        color: $rippley-color-3;
+    }
+}      
+/* Fin */
+
+/* IMG central */
+.img_central 
+{
+    position: relative;
+    height: 700px;
+    background-image: url("../images/design/web-design.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-origin: border-box;
+    background-size: 100% 100%;
+}
+
+.img_2
+{
+    position: relative;
+    height: auto;
+    background: url("../images/design/computadoras_conexion.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-origin: border-box;
+    background-size: 100% 100%;
+}    
+    
+/*Clases Genericas */
+
+.background-black
+{
+    background: $rippley-color-1;
+}
+
+.color-white
+{
+    color: $rippley-color-2;
+}
+
+.margin-5
+{
+    margin-bottom: 5%;
+}
+
+.particles-js-canvas-el
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#contacto h1
+{
+    color: $rippley-color-2;
+
+    &:hover
+    {
+        color: $rippley-color-1;
+    }
+}
+
+#respuesta_form_contacto
+{
+    min-height: 70px;
+}
+
+.full-screen-website-loader
+{
+    position: fixed;
+    background: rgba($rippley-color-7, 0.9);
+    height: 100vh;
+    width: 100%;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overflow-hidden
+{
+    overflow: hidden;
+}
+
+@media screen and (min-width:1200px) 
+{
+    .box:after 
+    {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

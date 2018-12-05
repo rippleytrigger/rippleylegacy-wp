@@ -1,0 +1,161 @@
+.seccion-intro{
+    .jumbotron.intro{
+        color: $rippley-color-2;
+        background: $rippley-color-5;
+    }
+    
+    article{
+        z-index: 55;
+        position: relative;
+    }
+
+    .box_background{
+        margin: 30px 0;
+        padding: 30px 15px; 
+        background: $rippley-color-2;
+        background: rgba($rippley-color-2,0.9);
+    }
+}
+
+
+.seccion-quien-soy{
+    background-color: $rippley-color-1;
+    .jumbotron{
+        background: $rippley-color-6;
+    }
+
+    .row p, .row ul{
+        color: $rippley-color-2;
+    }
+    .row .col-md-8{ 
+        margin-bottom: 100px;
+    }
+}
+
+
+.seccion-mis-servicios{
+    padding: 60px;
+    margin-bottom: 30px;
+    color: inherit;
+
+    &.container-fluid{
+        padding: 0;
+    }
+
+    .box{
+        padding: 80px 0;
+        margin-bottom: 0;
+        background: rgba(152, 167, 179, .75);
+    }
+
+    h1{
+        text-shadow: 1px 2px 2px $rippley-color-1;
+    }
+
+    h2{
+    color: $rippley-color-1;
+    }
+
+    p{
+    margin-bottom: 15px;
+    font-weight: 200;
+    color: $rippley-color-1;
+    }
+
+    .icono-servicio {
+        width: 10rem;
+        height: 10rem;
+        line-height: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        border-radius: 10rem;
+        background: #f6f6f8;
+        border: solid .0625rem #d9d9e2;
+        text-align: center;
+    }
+
+    .jumbotron{
+        padding: 0;
+    }
+}
+
+.seccion-portafolio{
+    .image-wrapper{
+        height: 200px;
+    }
+    
+    .image-wrapper img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .portfolio-frontground-img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: scale(.8);
+        transition: all .3s ease;
+        background: rgba(0, 0, 0, 0.7);
+    
+        .portafolio-item:hover &{
+            transform: scale(1.0);
+            opacity: 1;
+        }
+    }
+
+    .portafolio-item{
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 7px 20px $rippley-color-1;
+    }
+    
+    .portafolio-img-background{
+        width: 102%;
+        height: auto;
+        position: absolute;
+        z-index: 100;
+        top: 0px;
+        left: 0px;
+        transition: all .3s ease;
+        backface-visibility: hidden;
+        display: block;
+    
+        .portafolio-item:hover &{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.seccion-contacto{
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    h1, p{
+        color: white;
+    }
+    .jumbotron{
+        transition: .5s background ease-out, .1s border-left, .2s border-top, .3s border-right ,
+        .4s border-bottom, 1s color; 
+    }
+
+    &:hover{
+        h1, p{
+            color: black;
+        }
+        .jumbotron{
+            background: lightgreen;
+        }
+        hr{
+           opacity: .1;
+        }
+    }
+}

@@ -24,6 +24,6 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body class="body" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <?php get_template_part('include/menu'); ?>

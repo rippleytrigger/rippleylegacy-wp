@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-4 col-lg-4">
                             <img class="img-responsive thumbnail" 
-                            src="content/img_diseño/domain-2121820_1920.jpg">           
+                            src="<?php echo get_template_directory_uri(); ?>/images/design/domain-2121820_1920.jpg">           
                         </div>
                         <div class="col-md-8 col-lg-8 jumbotron">
                             <h3>Establece un alcance mundial de tus productos y servicios.</h3>
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img class="img-responsive thumbnail" 
-                            src="content/img_diseño/sitio_web.jpg">                 
+                            src="<?php echo get_template_directory_uri(); ?>/images/design/sitio_web.jpg">                 
                         </div>
                         <div class="col-md-8 jumbotron">
 
@@ -50,7 +50,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <img class="img-responsive thumbnail" src="content/img_diseño/office-620822_1920.jpg"> 
+                            <img class="img-responsive thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/design/office-620822_1920.jpg"> 
                         </div>
                         <div class="col-md-8 jumbotron">
                             <h3>Reduce significativamente tus gastos operativos</h3>
@@ -67,7 +67,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img class="img-responsive thumbnail" 
-                            src="content/img_diseño/imagen_corporativa.jpg">
+                            src="<?php echo get_template_directory_uri(); ?>/images/design/imagen_corporativa.jpg">
                         </div>
                         <div class="col-md-8 jumbotron">
                             <h3>Define la imagen profesional de tu empresa</h3>
@@ -108,7 +108,7 @@
 
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-6 margin-40px-portrait">
-                    <img class="img-responsive img-rounded" src="content/link.jpg">
+                    <img class="img-responsive img-rounded" src="http://rippleylegacy.local/wp-content/themes/rippleylegacy/images/me.jpg">
                 </div>
 
                 <div class="col-md-8 col-sm-12 col-xs-12 text-justify color-white">
@@ -150,7 +150,7 @@
                     <section class="detalle-servicio col-md-4 text-center-portrait margin-40px-portrait">
                         <div class="text-center">
                             <figure class="icono-servicio margin-auto-portrait">
-                                <img src="content/icono-consultoria.svg" alt="Consultoría" />
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icono-consultoria.svg" alt="Consultoría" />
                             </figure>
                         </div>
                         <div class="text">
@@ -166,7 +166,7 @@
                     <section class="detalle-servicio col-md-4 text-center-portrait margin-40px-portrait">
                         <div class="text-center">
                             <figure class="icono-servicio margin-auto-portrait">
-                                <img src="content/icono-diseno.svg" alt="Diseño" />
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icono-diseno.svg" alt="Diseño" />
                             </figure>
                         </div>
                         <div class="text">
@@ -182,7 +182,7 @@
                     <section class="detalle-servicio col-md-4 text-center-portrait margin-40px-portrait">
                         <div class="text-center">
                             <figure class="icono-servicio margin-auto-portrait">
-                                <img src="content/icono-desarrollo.svg" alt="Desarrollo" />
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icono-desarrollo.svg" alt="Desarrollo" />
                             </figure>
                         </div>
                         <div class="text">
@@ -220,7 +220,7 @@
                     margin-5 portafolio-item box-shadow-portfolio">
                         <div class="image-wrapper">
                             <a href="http://universitas.ws02.logoscorp.com">
-                                <img src="content/universitas.jpg" 
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/universitas.jpg" 
                                 class="portafolio-img-background img-responsive" alt="Image" />
                             </a>
                         </div>
@@ -229,7 +229,7 @@
                     box-shadow-portfolio">
                         <div class="image-wrapper">
                             <a href="http://mydrkids.com">
-                                <img src="content/drkids.jpg" 
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/drkids.jpg" 
                                 class="portafolio-img-background
                                 img-responsive" alt="Image" />
                             </a>
@@ -239,7 +239,7 @@
                     box-shadow-portfolio">
                         <div class="image-wrapper">
                             <a href="http://logoscorp.com/en/" >
-                                <img src="content/logoscorp.jpg" 
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/logoscorp.jpg" 
                                 class="img-responsive
                                 portafolio-img-background" alt="Image" />
                             </a>
@@ -249,7 +249,7 @@
                     box-shadow-portfolio">
                         <div class="image-wrapper">
                             <a href="http://lifeinvestasset.com/en/">
-                                <img src="content/lifeinvest.jpg" 
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/lifeinvest.jpg" 
                                 class="img-responsive portafolio-img-background" 
                                 alt="Image" />
                             </a>
